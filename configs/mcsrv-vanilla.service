@@ -1,0 +1,19 @@
+[Unit]
+Description=Minecraft Vanilla Server
+After=network.target
+
+[Service]
+User=mcsrvv
+Nice=1
+KillMode=none
+SuccessExitStatus=0 1
+ProtectHome=true
+ProtectSystem=full
+PrivateDevices=true
+NoNewPrivileges=true
+WorkingDirectory=/mcdata/mcsrvv
+ExecStart=/usr/bin/java -Xmx2048M -Xms1024M -jar minecraft_server.jar nogui
+ExecStop=/usr/local/bin/mcrcon -H 127.0.0.1 -P 25501 -p <rcon-password> stop
+
+[Install]
+WantedBy=multi-user.target
