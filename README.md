@@ -9,6 +9,10 @@ Create a Hyper-V Virtual Machine with two interfaces, a primary and secondary, e
 
 Download and compile [GoDNS](/TimothyYe/godns) and move the binary into `/usr/local/bin`.  Move [configs/godns.conf](configs/godns.json) into `/usr/local/etc` and use [godns.service](configs/godns.service) in `/etc/systemd/system` for GoDNS service startup.
 
+### Firewall (ufw)
+
+Configure the firewall (ufw) to accept incoming Minecraft connections on all interfaces, but only mcrcon and SSH on the secondary, internally facing interface.
+
 ## Disk Configuration
 
 Attach a separate, virtual disk to the Virtual Machine in Hyper-V and use it to host Minecraft data.  Mount it and make the mount persistent, where sdX is the target disk.  You can easily identify the virtual disk's corresponding `/dev` to know what letter to substitute for `X` by running `fdisk -l`.
