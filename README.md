@@ -9,6 +9,8 @@ Create a Hyper-V Virtual Machine with two interfaces, a primary and secondary, e
 
 Download and compile [GoDNS](/TimothyYe/godns) and move the binary into `/usr/local/bin`.  Move [configs/godns.conf](configs/godns.json) into `/usr/local/etc` and use [godns.service](configs/godns.service) in `/etc/systemd/system` for GoDNS service startup.
 
+`systemctl enable godns.service ; systemctl start godns.service`
+
 ### Firewall (ufw)
 
 Configure the firewall (ufw) to accept incoming Minecraft connections on all interfaces, but only mcrcon and SSH on the secondary, internally facing interface.  The port values for the firewall will depend upon the ports you intend to select as part of the [Software Configuration](#software-configuration) for Vanilla Minecraft, Bedrock, as well as mcrcon.  Select high, unreserved ports for each.  Vanilla requires TCP, while Bedrock will require TCP and UDP on the same port. 
