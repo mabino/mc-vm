@@ -13,7 +13,7 @@ Download and compile [GoDNS](/TimothyYe/godns) and move the binary into `/usr/lo
 
 ### Firewall (ufw)
 
-Configure the firewall (ufw) to accept incoming Minecraft connections on all interfaces, but only mcrcon and SSH on the secondary, internally facing interface.  The port values for the firewall will depend upon the ports you intend to select as part of the [Software Configuration](#software-configuration) for Vanilla Minecraft, Bedrock, as well as mcrcon.  Select high, unreserved ports for each.  Vanilla requires TCP, while Bedrock will require TCP and UDP on the same port. 
+Configure the [Uncomplicated Firewall](https://wiki.ubuntu.com/UncomplicatedFirewall) (ufw) to accept incoming Minecraft connections on all interfaces, but only mcrcon and SSH on the secondary, internally facing interface.  The port values for the firewall will depend upon the ports you intend to select as part of the [Software Configuration](#software-configuration) for Vanilla Minecraft, Bedrock, as well as mcrcon.  Select high, unreserved ports for each.  Vanilla requires TCP, while Bedrock will require TCP and UDP on the same port. 
 
 ## Disk Configuration
 
