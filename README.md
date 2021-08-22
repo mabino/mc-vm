@@ -15,7 +15,8 @@ Append `/etc/fstab` to mount the new partition or disk at startup.
 
 Create a user for each server instance, where V or B indicate [Vanilla](https://www.minecraft.net/en-us/download/server) or [Bedrock](https://www.minecraft.net/en-us/download/server/bedrock) for the sake of this example.
 
-`useradd -r -m -U -d /mcdata/mcsrvV -s /bin/bash mcsrvV ; useradd -r -m -U -d /mcdata/mcsrvB -s /bin/bash mcsrvB`
+`useradd -r -m -U -d /mcdata/mcsrvV -s /bin/bash mcsrvV`  
+`useradd -r -m -U -d /mcdata/mcsrvB -s /bin/bash mcsrvB`
 
 ## Startup Scripts
 
