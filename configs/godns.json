@@ -1,0 +1,15 @@
+{
+  "provider": "Dreamhost",
+  "login_token": "<your login token>",
+  "domains": [{
+      "domain_name": "<your domain>",
+      "sub_domains": ["<your subdomain>"]
+    }
+  ],
+  "resolver": "8.8.8.8",
+  "ip_url": "https://myip.biturl.top",
+  "ip_type": "IPv4",
+  "interval": 300,
+  "resolver": "ns1.dreamhost.com",
+  "socks5_proxy": ""
+}
