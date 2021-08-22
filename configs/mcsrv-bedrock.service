@@ -1,0 +1,19 @@
+[Unit]
+Description=Minecraft Bedrock Server
+After=network.target
+
+[Service]
+User=mcsrv02
+Nice=1
+KillMode=none
+SuccessExitStatus=0 1
+ProtectHome=true
+ProtectSystem=full
+PrivateDevices=true
+NoNewPrivileges=true
+WorkingDirectory=/mcdata/mcsrvB
+Environment="LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mcdata/mcsrvB"
+ExecStart=/mcdata/mcsrvB/bedrock_server
+
+[Install]
+WantedBy=multi-user.target
