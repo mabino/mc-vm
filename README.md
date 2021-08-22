@@ -3,7 +3,7 @@ Minecraft Server setup and configuration for [Ubuntu 20.04](https://ubuntu.com) 
 
 ## Network Configuration
 
-Create a Hyper-V Virtual Machine with two interfaces, a primary and secondary, each set to use an [external network](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/connect-to-network).  The primary interface will be public-facing and used to update DNS dynamically via [GoDNS](/TimothyYe/godns), and a private interface that will accept connections via an internal LAN for both Minecraft clients as well as [mcrcon](/Tiiffi/mcrcon) and SSH.
+Create a Hyper-V Virtual Machine with two interfaces, a primary and secondary, each set to use an [external network](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/connect-to-network).  The primary interface will be public-facing and used to update DNS dynamically via [GoDNS](/TimothyYe/godns), and the secondary interface will accept connections via an internal LAN for both Minecraft clients as well as [mcrcon](/Tiiffi/mcrcon) and SSH.
 
 ### GoDNS
 
