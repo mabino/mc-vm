@@ -21,5 +21,5 @@ Create a user for each server instance, where V or B indicate [Vanilla](https://
 
 Use [configs/mcsrv-vanilla.service](configs/mcsrv-vanilla.service) in /etc/systemd/system for Vanilla Server startup, [configs/mcsrv-bedrock.service](configs/mcsrv-bedrock.service) for Bedrock Server startup.
 
-`systemctl enable mcsrv-vanilla.service ; systemctl start mcsrv-vanilla.service`
+`systemctl enable mcsrv-vanilla.service ; systemctl start mcsrv-vanilla.service`  
 `systemctl enable mcsrv-bedrock.service ; systemctl start mcsrv-bedrock.service`
