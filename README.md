@@ -34,11 +34,13 @@ Create a user for each server instance, where V or B indicate Vanilla or Bedrock
 
 ## Software Configuration
 
+### Minecraft Server Installation
+
 Download the [Vanilla Minecraft Server](https://www.minecraft.net/en-us/download/server) software as the `mcsrvV` user into `/mcdata/mcsrvV` and the [Bedrock Minecraft Server](https://www.minecraft.net/en-us/download/server/bedrock) software as `mcsrvB` into `/mcdata/mcsrvB`.
 
 Configure 
 
-## Startup Scripts
+### Server Startup Scripts
 
 Use [configs/mcsrv-vanilla.service](configs/mcsrv-vanilla.service) in `/etc/systemd/system` for Vanilla Server startup, [configs/mcsrv-bedrock.service](configs/mcsrv-bedrock.service) for Bedrock Server startup.
 
