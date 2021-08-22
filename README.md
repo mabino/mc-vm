@@ -1,5 +1,5 @@
 # mc.vm
-Minecraft Server setup and configuration for [Ubuntu 20.04](https://ubuntu.com) on a [Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/) host.
+Minecraft Server setup and configuration for [Ubuntu 20.04 LTS](https://ubuntu.com) on a [Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/) host.
 
 ## Network Configuration
 
@@ -11,7 +11,7 @@ Download and compile [GoDNS](/TimothyYe/godns) and move the binary into `/usr/lo
 
 ## Disk Configuration
 
-Attach a separate partition or disk to host Minecraft data, where sdX is the target partition or disk, and create a link to the mount point.
+Attach a separate, virtual disk to the Virtual Machine in Hyper-V and use it to host Minecraft data.  Mount it and make the mount persistent, where sdX is the target disk.  You can easily identify the virtual disk's corresponding `/dev` to know what letter to substitute for `X` by running `fdisk -l`.
 
 `mkdir /mcdata ; mount /dev/sdX /mnt/mcdata ; ln -s /mnt/mcdata /mcdata`
 
