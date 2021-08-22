@@ -3,7 +3,7 @@ Minecraft Server setup and configuration for [Ubuntu 20.04 LTS](https://ubuntu.c
 
 ## Network Configuration
 
-Create a Hyper-V Virtual Machine with two interfaces, a primary and secondary, each set to use an [external network](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/connect-to-network).  The primary interface will be public-facing and used to update DNS dynamically via [GoDNS](/TimothyYe/godns), and the secondary interface will accept connections via an internal LAN for both Minecraft clients as well as [mcrcon](/Tiiffi/mcrcon) and SSH.
+Create a Hyper-V Virtual Machine with two interfaces, a primary and secondary, each set to use an [external network](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/connect-to-network).  The primary interface will be public-facing and used to update DNS dynamically via [GoDNS](/TimothyYe/godns); the secondary interface will accept connections via an internal LAN for both Minecraft clients as well as [mcrcon](/Tiiffi/mcrcon) and SSH.
 
 ### GoDNS
 
@@ -11,7 +11,7 @@ Download and compile [GoDNS](/TimothyYe/godns) and move the binary into `/usr/lo
 
 ### Firewall (ufw)
 
-Configure the firewall (ufw) to accept incoming Minecraft connections on all interfaces, but only mcrcon and SSH on the secondary, internally facing interface.  The port values for the firewall will depend upon the ports selected as part of the [Software Configuration](#software-configuration) for Vanilla Minecraft, Bedrock, as well as mcrcon. 
+Configure the firewall (ufw) to accept incoming Minecraft connections on all interfaces, but only mcrcon and SSH on the secondary, internally facing interface.  The port values for the firewall will depend upon the ports you intend to select as part of the [Software Configuration](#software-configuration) for Vanilla Minecraft, Bedrock, as well as mcrcon.  Select high, unreserved ports for each.  Vanilla requires TCP, while Bedrock will require TCP and UDP on the same port. 
 
 ## Disk Configuration
 
@@ -25,12 +25,16 @@ Append `/etc/fstab` to mount the new partition or disk at startup.
 
 ## User Configuration
 
-Create a user for each server instance, where V or B indicate [Vanilla](https://www.minecraft.net/en-us/download/server) or [Bedrock](https://www.minecraft.net/en-us/download/server/bedrock) for the sake of this example.
+Create a user for each server instance, where V or B indicate Vanilla or Bedrock for the sake of this example.
 
 `useradd -r -m -U -d /mcdata/mcsrvV -s /bin/bash mcsrvV`  
 `useradd -r -m -U -d /mcdata/mcsrvB -s /bin/bash mcsrvB`
 
 ## Software Configuration
+
+Download the [Vanilla Minecraft Server](https://www.minecraft.net/en-us/download/server) software as the `mcsrvV` user into `/mcdata/mcsrvV` and the [Bedrock Minecraft Server](https://www.minecraft.net/en-us/download/server/bedrock) software as `mcsrvB` into `/mcdata/mcsrvB`.
+
+Configure 
 
 ## Startup Scripts
 
