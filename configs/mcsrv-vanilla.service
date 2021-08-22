@@ -13,7 +13,7 @@ PrivateDevices=true
 NoNewPrivileges=true
 WorkingDirectory=/mcdata/mcsrvV
 ExecStart=/usr/bin/java -Xmx2048M -Xms1024M -jar minecraft_server.jar nogui
-ExecStop=/usr/local/bin/mcrcon -H 127.0.0.1 -P 25501 -p <rcon-password> stop
+ExecStop=/usr/local/bin/mcrcon -H 127.0.0.1 -P <selected mcrcon port> -p <rcon password> stop
 
 [Install]
 WantedBy=multi-user.target
