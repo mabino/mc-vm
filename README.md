@@ -11,7 +11,7 @@ Download and compile [GoDNS](/TimothyYe/godns) and move the binary into `/usr/lo
 
 ### Firewall (ufw)
 
-Configure the firewall (ufw) to accept incoming Minecraft connections on all interfaces, but only mcrcon and SSH on the secondary, internally facing interface.
+Configure the firewall (ufw) to accept incoming Minecraft connections on all interfaces, but only mcrcon and SSH on the secondary, internally facing interface.  The port values for the firewall will depend upon the ports selected as part of the [Software Configuration](#software-configuration) for Vanilla Minecraft, Bedrock, as well as mcrcon. 
 
 ## Disk Configuration
 
@@ -31,8 +31,6 @@ Create a user for each server instance, where V or B indicate [Vanilla](https://
 `useradd -r -m -U -d /mcdata/mcsrvB -s /bin/bash mcsrvB`
 
 ## Software Configuration
-
-## Firewall Configuration
 
 ## Startup Scripts
 
