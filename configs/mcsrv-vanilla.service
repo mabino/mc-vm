@@ -3,7 +3,7 @@ Description=Minecraft Vanilla Server
 After=network.target
 
 [Service]
-User=mcsrvv
+User=mcsrvV
 Nice=1
 KillMode=none
 SuccessExitStatus=0 1
