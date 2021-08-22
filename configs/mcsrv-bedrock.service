@@ -3,7 +3,7 @@ Description=Minecraft Bedrock Server
 After=network.target
 
 [Service]
-User=mcsrv02
+User=mcsrvB
 Nice=1
 KillMode=none
 SuccessExitStatus=0 1
