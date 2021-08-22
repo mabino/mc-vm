@@ -13,7 +13,13 @@ Download and compile [GoDNS](/TimothyYe/godns) and move the binary into `/usr/lo
 
 ### Firewall (ufw)
 
-Configure the [Uncomplicated Firewall](https://wiki.ubuntu.com/UncomplicatedFirewall) (ufw) to accept incoming Minecraft connections on all interfaces, but only mcrcon and SSH on the secondary, internally facing interface.  The port values for the firewall will depend upon the ports you intend to select as part of the [Software Configuration](#software-configuration) for Vanilla Minecraft, Bedrock, as well as mcrcon.  Select high, unreserved ports for each.  Vanilla requires TCP, while Bedrock will require TCP and UDP on the same port. 
+Configure the [Uncomplicated Firewall](https://wiki.ubuntu.com/UncomplicatedFirewall) (ufw) to accept incoming Minecraft connections on all interfaces, but only mcrcon and SSH on the secondary, internally facing interface.  The port values for the firewall will depend upon the ports you intend to select as part of the [Software Configuration](#software-configuration) for Vanilla Minecraft, Bedrock, as well as mcrcon.  Select high, unreserved ports for each.  Vanilla requires TCP, while Bedrock will require TCP and UDP on the same port.
+
+`ufw allow <your selected vanilla port>/tcp`  
+`ufw allow <your selected bedrock port>/tcp`  
+`ufw allow <your selected bedrock port>/udp`  
+`ufw allow in on <your secondary interface alias> to any port <your selected mcrcon port> proto tcp`  
+`ufw allow in on <your secondary interface alias> to any port 22 proto tcp`
 
 ## Disk Configuration
 
@@ -38,7 +44,7 @@ Create a user for each server instance, where V or B indicate Vanilla or Bedrock
 
 Download the [Vanilla Minecraft Server](https://www.minecraft.net/en-us/download/server) software as the `mcsrvV` user into `/mcdata/mcsrvV` and the [Bedrock Minecraft Server](https://www.minecraft.net/en-us/download/server/bedrock) software as `mcsrvB` into `/mcdata/mcsrvB`.
 
-Configure 
+Configure the [Vanilla server.properties](configs/mcsrvV/server.properties) and [Bedrock server.properties](configs//mcsrvB/server.properties) to have your selected port and mcrcon port for Vanilla (TCP only), and your selected port and IPv6 port for Bedrock (TCP and UDP).
 
 ### Server Startup Scripts
 
