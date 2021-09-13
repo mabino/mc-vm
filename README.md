@@ -1,4 +1,4 @@
-# mc.vm
+# mc-vm
 Minecraft Server setup and configuration for [Ubuntu 20.04 LTS](https://ubuntu.com) on a [Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/) host.
 
 ## Network Configuration
