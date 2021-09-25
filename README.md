@@ -7,7 +7,7 @@ Create a Hyper-V Virtual Machine with two interfaces, a primary and secondary, e
 
 ### GoDNS
 
-Download and compile [GoDNS](https://github.com/TimothyYe/godns) and move the binary into `/usr/local/bin`.  Move [configs/godns.conf](configs/godns.json) into `/usr/local/etc` and use [godns.service](configs/godns.service) in `/etc/systemd/system` for GoDNS service startup.
+If hosted via a dynamically assigned IP address that you wish to map to a domain name, download and compile [GoDNS](https://github.com/TimothyYe/godns) and move the binary into `/usr/local/bin`.  Move [configs/godns.conf](configs/godns.json) into `/usr/local/etc` and use [godns.service](configs/godns.service) in `/etc/systemd/system` for GoDNS service startup.  This service can exist on the Minecraft server or any other server that shares the Minecraft Server public IP.
 
 `systemctl enable godns.service ; systemctl start godns.service`
 
