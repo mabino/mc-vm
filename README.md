@@ -46,6 +46,10 @@ Download the [Vanilla Minecraft Server](https://www.minecraft.net/en-us/download
 
 Configure the [Vanilla server.properties](configs/mcsrvV/server.properties) and [Bedrock server.properties](configs//mcsrvB/server.properties) to have your selected port and mcrcon port for Vanilla (TCP only), and your selected port and IPv6 port for Bedrock (TCP and UDP).
 
+#### Using Forge, Mods
+
+https://mcversions.net
+
 ### Server Startup Scripts
 
 Use [configs/mcsrv-vanilla.service](configs/mcsrv-vanilla.service) in `/etc/systemd/system` for Vanilla Server startup, [configs/mcsrv-bedrock.service](configs/mcsrv-bedrock.service) for Bedrock Server startup.
