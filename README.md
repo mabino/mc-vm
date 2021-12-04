@@ -48,7 +48,11 @@ Configure the [Vanilla server.properties](configs/mcsrvV/server.properties) and 
 
 #### Using Forge, Mods
 
-https://mcversions.net
+Download [the appropriate Minecraft version](https://mcversions.net) for the [particular version of Forge](https://files.minecraftforge.net/net/minecraftforge/forge/) that your mod requires.  Install Minecraft following the patterns for a Vanilla installation, then run the Forge installation from the same location.
+
+Note that older versions of Minecraft, Forge, and many popular mods require older versions of the Java Runtime.  [Java 8](https://www.java.com/en/download/manual.jsp) is typically a good baseline.  Also, an older version of the Java Runtime may need to be pointed to up-to-date CA certificates in order to secure a connection for account validation against Mojang or Microsoft.  You can point an older Java at a newer certificate store by using the `javax.net.ssl.trustStore` system option in the `ExecStart` portion of the Server Startup Script, e.g.:
+
+`java -Djava.net.ssl.trustStore=/etc/ssl/certs/java/cacerts`
 
 ### Server Startup Scripts
 
