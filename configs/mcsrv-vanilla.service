@@ -12,7 +12,7 @@ ProtectSystem=full
 PrivateDevices=true
 NoNewPrivileges=true
 WorkingDirectory=/mcdata/mcsrvV
-ExecStart=/usr/bin/java -Xmx2048M -Xms1024M -jar minecraft_server.jar nogui
+ExecStart=/usr/bin/java -Dlog4j2.formatMsgNoLookups=true -Xmx2048M -Xms1024M -jar minecraft_server.jar nogui
 ExecStop=/usr/local/bin/mcrcon -H 127.0.0.1 -P <selected mcrcon port> -p <rcon password> stop
 
 [Install]
